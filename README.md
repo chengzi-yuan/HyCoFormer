@@ -1,11 +1,11 @@
-# HyPolFormer: An Efficient Spatially Gated Polarity Transformer with Hybrid Sampling for Image Dehazing
+# HyCoFormer: An Efficient Spatially Compensated Transformer with Hybrid Sampling for Image Dehazing
 
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Paper](https://img.shields.io/badge/Paper-Link-blue.svg)]()
 [![Data](https://img.shields.io/badge/Data-BaiduPan-brightgreen.svg)]()
 
-> Welcome to the official code and model repository for the paper **HyPolFormer: An Efficient Spatially Gated Polarity Transformer with Hybrid Sampling for Image Dehazing**.
+> Welcome to the official code and model repository for the paper **HyCoFormer: An Efficient Spatially Compensated Transformer with Hybrid Sampling for Image Dehazing**.
 
 ---
 
@@ -25,11 +25,11 @@ To run the code, you will need **Python 3.11**, **PyTorch 2.5.1**, and **CUDA 12
 
 Follow these steps to set up the environment.
 
-**1. Create a new conda environment named `hypolformer`:**
+**1. Create a new conda environment named `hycoformer`:**
 
 ```bash
-conda create -n hypolformer python=3.11 -y
-conda activate hypolformer
+conda create -n hycoformer python=3.11 -y
+conda activate hycoformer
 ```
 
 **2. Install PyTorch and dependencies:**
@@ -64,11 +64,11 @@ The expected directory structure is as follows:
 ```text
 ┬─ configs
 │   ├─ RESIDE-IN/                                      # Please ensure that the configuration file matches the dataset name
-│   │   ├─ hypolformer-s.json
+│   │   ├─ hycoformer-s.json
 │   │   └─ ... (model name)
 │   │
 │   ├─ RS-Haze/
-│   │   ├─ hypolformer-s.json
+│   │   ├─ hycoformer-s.json
 │   │   └─ ... (model name)
 │   │
 │   └─ ... (dataset name)
@@ -115,15 +115,15 @@ After downloading the pre-trained models, please ensure that the `.pth` files ar
 The expected project hierarchy is as follows:
 
 ```text
-HyPolFormer/
+HyCoFormer/
 ├── ...
 ├── saved_models/
 │   ├─ RESIDE-IN/
-│   │   ├─ hypolformer-s.pth       <-- Place the downloaded file here
+│   │   ├─ hycoformer-s.pth       <-- Place the downloaded file here
 │   │   └─ ... (model name)
 │   │
 │   ├─ RS-Haze/
-│   │   ├─ hypolformer-s.pth       <-- Place the downloaded file here
+│   │   ├─ hycoformer-s.pth       <-- Place the downloaded file here
 │   │   └─ ... (model name)
 │   │
 │   └─ ...
@@ -142,16 +142,16 @@ The configuration files contain the corresponding settings for each model. `mode
 
 For more details about the command-line arguments and their usage, please refer to `test.py`.
 
-### Evaluate HyPolFormer-S on RESIDE-IN
+### Evaluate HyCoFormer-S on RESIDE-IN
 
 ```bash
-python test.py --model hypolformer-s --dataset RESIDE-IN --exp RESIDE-IN --num_workers 4
+python test.py --model hycoformer-s --dataset RESIDE-IN --exp RESIDE-IN --num_workers 4
 ```
 
-### Evaluate HyPolFormer-S on RS-Haze
+### Evaluate HyCoFormer-S on RS-Haze
 
 ```bash
-python test.py --model hypolformer-s --dataset RS-Haze --exp RS-Haze --num_workers 4
+python test.py --model hycoformer-s --dataset RS-Haze --exp RS-Haze --num_workers 4
 ```
 
 The evaluation results will be automatically saved in the `results` directory.
@@ -166,11 +166,11 @@ The evaluation results will be automatically saved in the `results` directory.
 
 ## 📄 Citation
 
-If you find **HyPolFormer** useful for your research, please consider citing our paper:
+If you find **HyCoFormer** useful for your research, please consider citing our paper:
 
 ```bibtex
-@article{hypolformer,
-  title={HyPolFormer: An Efficient Spatially Gated Polarity Transformer with Hybrid Sampling for Image Dehazing},
+@article{hycoformer,
+  title={HyCoFormer: An Efficient Spatially Compensated Transformer with Hybrid Sampling for Image Dehazing},
   author={},
   journal={},
   year={}
